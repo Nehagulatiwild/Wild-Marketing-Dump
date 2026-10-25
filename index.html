@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wild Marketing Dump</title>
+<meta property="og:title" content="The Wild Marketing Dump">
+<meta property="og:description" content="Last week in marketing. Unfiltered. By Neha Gulati. New issue every Monday.">
+<meta property="og:image" content="img/cover.png">
+<link rel="icon" href="img/cover.png">
+<meta name="description" content="Last week in marketing, India first. Curated and opinionated by Neha Gulati. New issue every Monday.">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="mag.css">
+<style>
+:root {
+  --blackletter: var(--serif);
+  --mono: var(--sans);
+  --bg: #FFF8EE;
+  --surface: #FFFFFF;
+  --text: #141414;
+  --text-2: #4A4A4A;
+  --line: #141414;
+  --accent: #FF4F9A;
+  --accent-ink: #141414;
+  --hi: #FFD23F;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141414; --surface: #1F1F1F; --text: #FFF8EE; --text-2: #C9C2B8; --line: #FFF8EE;
+    --accent: #FF4F9A; --accent-ink: #141414; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141414; --surface: #1F1F1F; --text: #FFF8EE; --text-2: #C9C2B8; --line: #FFF8EE;
+  --accent: #FF4F9A; --accent-ink: #141414; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--serif); font-size: 17px; line-height: 1.5;
+  padding: 28px 16px 64px;
+}
+[hidden] { display: none !important; }
+.wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* Masthead */
+.top { text-align: center; display: flex; flex-direction: column; gap: 10px; }
+.top .meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--sans); font-weight: 700; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.top h1 { font-family: var(--head); font-weight: 400; text-transform: uppercase; font-size: clamp(48px, 13vw, 96px); line-height: .9; margin: 6px 0 0; }
+.top h1 small { display: block; font-family: var(--serif); font-style: italic; text-transform: none; font-size: .55em; color: var(--accent); }
+.top p { margin: 0; font-style: italic; color: var(--text-2); font-size: 18px; text-wrap: balance; }
+
+/* Latest issue bar */
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; border: 2.5px solid var(--line); border-radius: 20px; background: var(--hi); color: #141414; padding: 16px 18px; }
+.bar .label { color: #141414 !important; }
+.bar .what { margin-right: auto; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.bar .label { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); }
+.bar .title { font-family: var(--head); font-size: 26px; line-height: 1.05; text-transform: uppercase; letter-spacing: .01em; }
+.btn { border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 18px; background: var(--accent); color: var(--accent-ink); font-family: var(--head); font-size: 20px; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; border: 0; cursor: pointer; }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--text); border: 2px solid var(--line); }
+
+.note { font-family: var(--mono); font-size: 13px; color: var(--accent); margin: -12px 0 0; }
+
+/* Sheets */
+#reader { display: flex; flex-direction: column; gap: 18px; }
+.frame { width: 100%; position: relative; overflow: hidden; border-radius: 18px; box-shadow: 0 1px 0 rgba(0,0,0,.08), 0 12px 30px -14px rgba(0,0,0,.45); }
+.frame .sheet { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+
+.loading { font-family: var(--mono); font-size: 14px; color: var(--text-2); text-align: center; padding: 40px 0; }
+
+/* Archive */
+.archive h2 { font-family: var(--head); font-weight: 400; font-size: 40px; text-transform: uppercase; margin: 0 0 10px; border-bottom: 3px solid var(--line); padding-bottom: 6px; }
+.archive ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.archive li { display: grid; grid-template-columns: auto 1fr auto; gap: 4px 14px; align-items: center; padding: 12px 0; border-bottom: 1px dotted var(--text-2); }
+.archive .no { font-family: var(--head); font-size: 34px; color: var(--accent); line-height: 1; }
+.archive .t { display: flex; flex-direction: column; min-width: 0; }
+.archive .t b { font-weight: 600; text-wrap: pretty; }
+.archive .t span { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.archive .acts { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.archive .acts a, .archive .acts button { border-radius: 999px; font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; padding: 8px 10px; min-height: 40px; border: 1.5px solid var(--line); background: transparent; color: var(--text); text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; }
+.archive .acts a:hover, .archive .acts button:hover { background: var(--hi); color: #141414; }
+.archive li[aria-current="true"] .t b::after { content: " · reading"; color: var(--accent); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+@media (max-width: 460px) { .archive li { grid-template-columns: auto 1fr; } .archive .acts { grid-column: 1 / -1; justify-content: flex-start; } }
+
+footer { border-top: 1px solid var(--line); padding-top: 14px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--text-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top" hidden>
+    <div class="meta"><span>Free · every Monday</span><span>India first, then the world</span></div>
+    <h1><small>The</small>Wild Marketing Dump</h1>
+    <p>Last week in marketing. Unfiltered. By Neha Gulati.</p>
+  </header>
+
+  <div class="bar" id="bar" hidden>
+    <div class="what">
+      <span class="label" id="barLabel">Latest issue</span>
+      <span class="title" id="barTitle">Loading…</span>
+    </div>
+    <a class="btn" id="pdf" href="#" target="_blank" rel="noopener">Open PDF ↗</a>
+  </div>
+  <p class="note" id="note" role="status" hidden></p>
+
+  <main id="reader" aria-live="polite"><p class="loading">Loading the issue…</p></main>
+
+  <section class="archive" aria-labelledby="archH">
+    <h2 id="archH">Every issue</h2>
+    <ol id="archive"></ol>
+  </section>
+
+  <footer>
+    <span>By Neha Gulati · <a href="https://www.instagram.com/neharunswild/" target="_blank" rel="noopener">@neharunswild</a></span>
+    <span>Facts from the linked sources · takes are mine</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var reader = document.getElementById('reader');
+  var archive = document.getElementById('archive');
+  var pdf = document.getElementById('pdf');
+  var barLabel = document.getElementById('barLabel');
+  var barTitle = document.getElementById('barTitle');
+  var note = document.getElementById('note');
+  var issues = [], cache = {}, current = null;
+
+  function fit() {
+    var frames = reader.querySelectorAll('.frame');
+    for (var i = 0; i < frames.length; i++) {
+      var f = frames[i], w = f.clientWidth, s = w / 1080;
+      f.style.height = Math.round(1350 * s) + 'px';
+      f.firstElementChild.style.transform = 'scale(' + s + ')';
+    }
+  }
+  if (window.ResizeObserver) new ResizeObserver(fit).observe(reader); else window.addEventListener('resize', fit);
+
+  function render(html, base) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var imgs = doc.querySelectorAll('img[src]');
+    for (var k = 0; k < imgs.length; k++) { try { imgs[k].setAttribute('src', new URL(imgs[k].getAttribute('src'), base).href); } catch (e) {} }
+    var sheets = doc.querySelectorAll('.sheet');
+    reader.innerHTML = '';
+    for (var i = 0; i < sheets.length; i++) {
+      var frame = document.createElement('div');
+      frame.className = 'frame';
+      var s = document.importNode(sheets[i], true);
+      var links = s.querySelectorAll('a[href]');
+      for (var j = 0; j < links.length; j++) { links[j].target = '_blank'; links[j].rel = 'noopener'; }
+      frame.appendChild(s);
+      reader.appendChild(frame);
+    }
+    fit();
+  }
+
+  function mark() {
+    var lis = archive.querySelectorAll('li');
+    for (var i = 0; i < lis.length; i++) lis[i].setAttribute('aria-current', lis[i].getAttribute('data-no') === current ? 'true' : 'false');
+  }
+
+  function show(no, scroll) {
+    var it = null;
+    for (var i = 0; i < issues.length; i++) if (issues[i].no === no) it = issues[i];
+    if (!it) return;
+    current = no;
+    var latest = issues[0].no === no;
+    barLabel.textContent = (latest ? 'Latest issue' : 'Past issue') + ' · No. ' + it.no + ' · ' + it.week;
+    barTitle.textContent = it.headline;
+    pdf.href = it.pdf;
+    note.hidden = true;
+    if (!latest) note.textContent = 'You are reading an older issue. The latest is No. ' + issues[0].no + '.';
+    try { history.replaceState(null, '', latest ? location.pathname + location.search : '#' + no); } catch (e) {}
+    mark();
+    var base = new URL(it.html, location.href).href;
+    var done = function (html) { render(html, base); if (scroll) window.scrollTo(0, 0); };
+    if (cache[no]) return done(cache[no]);
+    reader.innerHTML = '<p class="loading">Loading the issue…</p>';
+    fetch(it.html, { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.text(); })
+      .then(function (t) { cache[no] = t; if (current === no) done(t); })
+      .catch(function () { reader.innerHTML = '<p class="loading">This issue did not load. Check your connection and try again.</p>'; });
+  }
+
+  function buildArchive() {
+    archive.innerHTML = '';
+    issues.forEach(function (it) {
+      var li = document.createElement('li');
+      li.setAttribute('data-no', it.no);
+      li.innerHTML = '<span class="no"></span><span class="t"><b></b><span></span></span><span class="acts"><button type="button">Read</button><a>Download PDF</a></span>';
+      li.querySelector('.no').textContent = it.no;
+      li.querySelector('.t b').textContent = it.headline;
+      li.querySelector('.t span').textContent = 'Week of ' + it.week;
+      li.querySelector('button').addEventListener('click', function () { show(it.no, true); });
+      var a = li.querySelector('a'); a.href = it.pdf; a.setAttribute('download', 'Wild-Marketing-Dump-' + it.no + '.pdf');
+      archive.appendChild(li);
+    });
+  }
+
+  fetch('issues.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (data) {
+    issues = data.slice().sort(function (a, b) { return a.no < b.no ? 1 : -1; });
+    buildArchive();
+    var h = (location.hash || '').slice(1);
+    show(h && issues.some(function (x) { return x.no === h; }) ? h : issues[0].no, false);
+  }).catch(function () {
+    reader.innerHTML = '<p class="loading">The issues did not load. Refresh the page to try again.</p>';
+    barTitle.textContent = '';
+  });
+})();
+</script>
+</body>
+</html>
