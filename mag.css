@@ -329,10 +329,10 @@
 .toc16 .n { font-size: 44px; padding: 8px 0 4px; }
 .steal .redact h3 { font-size: 84px; }
 .steal .redact p { font-size: 32px; }
-.steal .gyaan p { font-size: 28px; }
-.steal .steps3 h4 { font-size: 36px; }
-.steal .steps3 p { font-size: 24px; }
-.steal .steps3 b { font-size: 64px; }
+.steal:has(.redact) .gyaan p { font-size: 28px; }
+.steal:has(.redact) .steps3 h4 { font-size: 36px; }
+.steal:has(.redact) .steps3 p { font-size: 24px; }
+.steal:has(.redact) .steps3 b { font-size: 64px; }
 .ai .ditem { padding: 30px 0; }
 .ai .ditem h3 { font-size: 62px; }
 .ai .ditem p.b { font-size: 30px; }
