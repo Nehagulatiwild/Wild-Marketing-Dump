@@ -269,3 +269,75 @@
 .ditem .mt { border-left-style: solid; }
 
 .tile.takebox.said { border-style: solid; }
+
+/* ===== Issue 02+ additions ===== */
+/* Big One without a photo: stat wall */
+.statwall { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.statwall .card { padding: 18px 22px 20px; }
+.statwall b { font-family: var(--head); font-weight: 400; font-size: 104px; line-height: .9; display: block; color: var(--cobalt); }
+.statwall span { font-size: 24px; line-height: 1.3; display: block; margin-top: 6px; }
+.quote { font-family: var(--serif); font-style: italic; font-size: 40px; line-height: 1.12; color: var(--paper); border-left: 8px solid var(--green); padding-left: 22px; }
+.quote cite { display: block; font-family: var(--sans); font-style: normal; font-weight: 700; font-size: 18px; letter-spacing: .1em; text-transform: uppercase; margin-top: 8px; color: var(--green); }
+
+/* Campaign page 2 alt: big "one night" stat */
+.bigword { font-family: var(--head); font-size: 220px; line-height: .84; color: var(--green); text-transform: uppercase; }
+.bigword small { display: block; font-family: var(--serif); font-style: italic; text-transform: none; font-size: 50px; line-height: 1.08; color: var(--paper); margin-top: 14px; }
+
+/* Redacted ad stand-in (Steal This) */
+.redact { background: var(--paper); color: var(--ink); border: 3px solid var(--ink); border-radius: 26px; padding: 28px 34px 30px; transform: rotate(-1deg); }
+.redact .k { font-weight: 700; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: var(--pink); }
+.redact h3 { font-family: var(--head); font-weight: 400; font-size: 70px; line-height: .98; text-transform: uppercase; margin: 6px 0 10px; }
+.redact p { font-size: 28px; line-height: 1.5; }
+.rbar { display: inline-block; background: var(--ink); height: .9em; vertical-align: -.1em; border-radius: 3px; }
+
+/* AI & Marketing */
+.ai { --bg: var(--purple); }
+.ai .hl { font-size: 140px; }
+.ai .sub { font-size: 46px; color: var(--yellow); margin-top: 8px; }
+.ai .ditem { border-top-color: var(--paper); }
+.ai .ditem .num { background: var(--green); color: var(--ink); }
+.ai .ditem h3 { color: var(--paper); font-size: 54px; }
+.ai .ditem p.b { color: var(--paper); font-size: 27px; }
+.ai .ditem .mt { color: var(--green); border-left-color: var(--green); font-size: 38px; }
+
+/* Money */
+.money { --bg: var(--green); }
+.money .hl { font-size: 128px; }
+.money .sub { font-size: 44px; margin-top: 6px; }
+.total { display: flex; gap: 22px; align-items: baseline; margin-top: 18px; }
+.total b { font-family: var(--head); font-weight: 400; font-size: 130px; line-height: .9; }
+.total span { font-family: var(--serif); font-style: italic; font-size: 40px; line-height: 1.08; }
+.ftable { width: 100%; border-collapse: separate; border-spacing: 0; border: 3px solid var(--ink); border-radius: 22px; overflow: hidden; background: var(--paper); }
+.ftable th { text-align: left; font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; background: var(--ink); color: var(--paper); padding: 12px 16px; }
+.ftable td { padding: 13px 16px; border-top: 2px solid var(--ink); font-size: 22px; line-height: 1.28; vertical-align: top; }
+.ftable td:first-child { font-family: var(--head); font-size: 32px; text-transform: uppercase; line-height: 1; white-space: nowrap; }
+.ftable td.amt { font-family: var(--head); font-size: 32px; white-space: nowrap; }
+
+/* People moves */
+.people { --bg: var(--yellow); }
+.people .hl { font-size: 150px; }
+.people .sub { font-size: 46px; margin-top: 6px; }
+.moves { display: flex; flex-direction: column; gap: 18px; }
+.move { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; border: 3px solid var(--ink); border-radius: 24px; background: var(--paper); padding: 18px 22px; }
+.move .ini { width: 96px; height: 96px; border-radius: 50%; border: 3px solid var(--ink); display: flex; align-items: center; justify-content: center; font-family: var(--head); font-size: 40px; padding-top: 4px; }
+.move .co { font-weight: 700; font-size: 18px; letter-spacing: .12em; text-transform: uppercase; }
+.move h4 { font-family: var(--head); font-weight: 400; font-size: 44px; text-transform: uppercase; line-height: 1; margin: 4px 0 6px; }
+.move p { font-size: 23px; line-height: 1.3; }
+.toc16 a { padding: 11px 0; }
+.toc16 b { font-size: 44px; }
+.toc16 span.s { font-size: 28px; }
+.toc16 .n { font-size: 44px; padding: 8px 0 4px; }
+.steal .redact h3 { font-size: 84px; }
+.steal .redact p { font-size: 32px; }
+.steal .gyaan p { font-size: 28px; }
+.steal .steps3 h4 { font-size: 36px; }
+.steal .steps3 p { font-size: 24px; }
+.steal .steps3 b { font-size: 64px; }
+.ai .ditem { padding: 30px 0; }
+.ai .ditem h3 { font-size: 62px; }
+.ai .ditem p.b { font-size: 30px; }
+.ai .ditem .mt { font-size: 44px; margin-top: 18px; }
+.people .move { padding: 24px 26px; }
+.people .move h4 { font-size: 52px; }
+.people .move p { font-size: 26px; }
+.people .moves { gap: 22px; }
