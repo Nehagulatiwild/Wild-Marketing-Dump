@@ -10,7 +10,7 @@ New issue every Monday, ready by **Sunday 6 pm IST**. Curated by Neha Gulati (@n
 - Render with `python3 tools/render.py issues/NN.html /tmp/out` (Playwright; fonts are local in `fonts/`). Fix any overflow it reports, then copy `/tmp/out/issue.pdf` to `issues/NN.pdf`.
 - Add the new entry to `issues.json`: `{ "no": "02", "week": "26 Oct–1 Nov 2026", "date": "2026-11-02", "headline": "...", "html": "issues/02.html", "pdf": "issues/02.pdf" }`.
 
-## The 13 pages (copy the previous issue as the template)
+## The 16 pages (copy the previous issue as the template)
 | # | Page | Colour |
 |---|---|---|
 | 1 | Cover: 3 witty, fun cover lines (not a summary) + ₹0 sticker | Hot pink |
@@ -22,7 +22,12 @@ New issue every Monday, ready by **Sunday 6 pm IST**. Curated by Neha Gulati (@n
 | 10 | Number of the Week + "My take" | Neon green |
 | 11 | Indian Brand Watch: 5 image tiles + "The pattern" | Orange |
 | 12 | Steal This × Wild Gyaan (merged): one move + concept + 3 steps + image | Cobalt |
-| 13 | Back page: marketing weather + Follow "Wild Brand Ideas & Stories for you!" | Hot pink |
+| 13 | AI & Marketing: 2–3 stories with one-liner takes (no image needed) | Purple |
+| 14 | Where Did the Money Go?: the week's consumer/D2C funding table (brand, what it sells, raised, led by) + "My take" | Neon green |
+| 15 | People Moves: 4–6 notable marketing/brand moves, one line each (no image needed) | Yellow |
+| 16 | Back page: marketing weather + Follow "Wild Brand Ideas & Stories for you!" | Hot pink |
+
+Page counters in the top-right read NN/16. Contents page lists every section.
 
 Palette: yellow #FFD23F, hot pink #FF4F9A, cobalt #2D5BFF, orange #FF7A1A, purple #7B3FF2, neon green #B6FF3B, off-white #FFF8EE, near-black #141414.
 Fonts: Anton (headlines), Instrument Serif italic (sub-lines), DM Sans (body).
